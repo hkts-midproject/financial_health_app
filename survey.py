@@ -202,7 +202,7 @@ def survey_display():
 
     survey = ss.StreamlitSurvey()
 
-    with survey.pages(3, progress_bar=True, on_submit=lambda : (encode_inputs(survey.data), survey.set_page(0))) as page:
+    with survey.pages(3, progress_bar=True, on_submit=lambda : encode_inputs(survey.data)) as page:
         # survey.pages(3, progress_bar=True, on_submit=lambda : encode_inputs(survey.data)) as page:#
         
         page.submit_button = page.default_btn_submit("완료")
